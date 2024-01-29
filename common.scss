@@ -1,0 +1,97 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+	font-family: "BigNoodleTitlingCyr";
+	@include adaptiveValue("font-size", 96, 40, 0, 1170, 390);
+	text-align: center;
+	&--size {
+		@include adaptiveValue("font-size", 43, 40);
+	}
+	@media (max-width: em(389)) {
+		font-size: toRem(32);
+	}
+}
+.block-description {
+	@include adaptiveValue("padding-top", 20, 13, 0, 1170, 390);
+	@include adaptiveValue("padding-right", 20, 14, 0, 1170, 390);
+	@include adaptiveValue("padding-bottom", 20, 13, 0, 1170, 390);
+	@include adaptiveValue("padding-left", 20, 14, 0, 1170, 390);
+	border-radius: 12px;
+	text-align: center;
+	background: linear-gradient(90deg, #8aeae3 -7.29%, #bdfffa 35.65%, #bdfffa 66.48%, #8aeae3 106.02%);
+	box-shadow:
+		0px 0px 0px 0px rgba(0, 0, 0, 0.03),
+		0px 7px 15px 0px rgba(0, 0, 0, 0.03),
+		0px 28px 28px 0px rgba(0, 0, 0, 0.03),
+		0px 63px 38px 0px rgba(0, 0, 0, 0.02),
+		0px 112px 45px 0px rgba(0, 0, 0, 0),
+		0px 174px 49px 0px rgba(0, 0, 0, 0);
+	&__text {
+		@include adaptiveValue("padding-top", 35, 16, 0, 1170, 390);
+		@include adaptiveValue("padding-right", 24, 11, 0, 1170, 390);
+		@include adaptiveValue("padding-bottom", 42, 16, 0, 1170, 390);
+		@include adaptiveValue("padding-left", 24, 11, 0, 1170, 390);
+		border-radius: 12px;
+		height: 100%;
+		border: 1px solid rgba(255, 255, 255, 0.72);
+		box-shadow:
+			0px 0px 0px 0px rgba(0, 0, 0, 0.03),
+			0px 7px 15px 0px rgba(0, 0, 0, 0.03),
+			0px 28px 28px 0px rgba(0, 0, 0, 0.03),
+			0px 63px 38px 0px rgba(0, 0, 0, 0.02),
+			0px 112px 45px 0px rgba(0, 0, 0, 0),
+			0px 174px 49px 0px rgba(0, 0, 0, 0);
+		p {
+			@include adaptiveValue("font-size", 20, 13, 0, 1170, 390);
+		}
+		&--padding {
+			@include adaptiveValue("padding-top", 35, 17, 0, 1170, 390);
+			@include adaptiveValue("padding-right", 40, 14, 0, 1170, 390);
+			@include adaptiveValue("padding-bottom", 35, 17, 0, 1170, 390);
+			@include adaptiveValue("padding-left", 40, 14, 0, 1170, 390);
+			p {
+				@include adaptiveValue("font-size", 17, 13, 0, 1170, 390);
+			}
+		}
+	}
+}
+
+.link {
+	font-family: "BigNoodleTitlingCyr";
+	// display: inline-block;
+	padding: toRem(36) toRem(99.43);
+	@include adaptiveValue("padding-top", 36, 36, 0, 1170, 768);
+	@include adaptiveValue("padding-right", 99.43, 76, 0, 1170, 768);
+	@include adaptiveValue("padding-bottom", 36, 36, 0, 1170, 768);
+	@include adaptiveValue("padding-left", 99.43, 76, 0, 1170, 768);
+	display: inline-block;
+	// padding: toRem(39.88) toRem(100);
+	text-transform: uppercase;
+	font-size: toRem(35);
+	border-radius: toRem(6);
+	background: (linear-gradient(90deg, #66d1c9 0%, #4ae1d6 42.42%, #66d1c9 93.62%));
+	color: $colorWhite;
+	transition: background 0.3s ease 0s;
+	box-shadow: 0px 4px 50px 0px #4ee1d6;
+	@media (any-hover: hover) {
+		&:hover {
+			background: (linear-gradient(90deg, #5eb6b0 0%, #44beb6 42.42%, #54b9b3 93.62%));
+			box-shadow: 0px 4px 50px 0px #47b6ae;
+		}
+	}
+	@media (max-width: $mobile) {
+		display: grid;
+		grid-template-columns: minmax(auto, toRem(354));
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+	@media (max-width: $mobileSmall) {
+		width: 100%;
+	}
+}
+.block-info {
+	&__item {
+	}
+	&--orange {
+	}
+}
